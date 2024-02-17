@@ -24,30 +24,32 @@ Developed by: MAHESH RAJ PUROHIT J
 RegisterNumber: 212222240058
 
 
-
 import numpy as np
 import matplotlib.pyplot as plt
-X=np.array([0,1,2,3,4,5,6,7,8,9])
-Y=np.array([1,3,2,5,7,8,8,9,10,12])
-XMean=np.mean(X)
-YMean=np.mean(Y)
-num,den=0,0
+X=np.array(eval(input()))
+Y=np.array(eval(input()))
+X_Mean=np.mean(X)
+Y_Mean=np.mean(Y)
+num=0
+denom=0
 for i in range(len(X)):
-  num+=(X[i]-XMean)*(Y[i]-YMean)
-  den+=(X[i]-XMean)**2
-m=num/den
-c=YMean-m*XMean
-print(m,c)
-Y_Pred=m*X+c
+  num+=(X[i]-X_Mean)*(Y[i]-Y_Mean)
+  denom+=(X[i]-X_Mean)**2
+m=num/denom
+b=Y_Mean-m*X_Mean
+print(m,b)
+Y_Pred=m*X+b
 print(Y_Pred)
 plt.scatter(X,Y)
 plt.plot(X,Y_Pred,color="red")
 plt.show() 
+
 */
 ```
 
 ## Output:
-![image](https://github.com/Jeshwanthkumarpayyavula/Find-the-best-fit-line-using-Least-Squares-Method/assets/145742402/e30e5e0d-23fa-4d0b-b9e7-d73681f82550)
+![Screenshot 2024-02-17 113228](https://github.com/maheshrajpurohit18/Find-the-best-fit-line-using-Least-Squares-Method/assets/118749665/7813c19d-f3cd-473b-89e2-54d54e56288c)
+
 
 
 ## Result:
